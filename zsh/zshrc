@@ -1,0 +1,13 @@
+
+# fnm
+FNM_PATH="/opt/homebrew/opt/fnm/bin"
+if [ -d "$FNM_PATH" ]; then
+  eval "`fnm env`"
+fi
+eval "$(fnm env --use-on-cd --shell zsh)"
+eval "$(starship init zsh)"
+
+export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export SUMO_HOME="/opt/homebrew/opt/sumo/share/sumo"
+export PATH="$PATH:$SUMO_HOME/bin"
